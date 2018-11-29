@@ -1,0 +1,1243 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+$cyan: #7bd3e5;
+$blue: #69b8e2;
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+button
+	cursor: pointer
+	border: none
+	transition: all .3s
+	&:focus
+		outline: none !important
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+
+h1,h2,h3,h4, b, strong 
+	font-weight: normal
+	
+a
+	transition: all .3s
+	&:hover
+		text-decoration: none
+	&:focus
+		outline: none
+
+ul,li 
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+.clearfix
+	&:after 
+    	display: block
+    	content: ""
+    	clear: both
+.done-w 
+	position: absolute
+	width: 100%
+	height: 100%
+	background-color: rgba(0, 0 ,0 , .5)
+	display: none
+	bottom: 0
+	right: 0
+	z-index: 10000
+
+.done-window 
+	position: fixed
+	display: block
+	left: 50%
+	top: 50%
+	-webkit-transform: translate(-50%, -50%)
+	-ms-transform: translate(-50%, -50%)
+	-o-transform: translate(-50%, -50%)
+	transform: translate(-50%, -50%)
+	background-color: rgba(255,255,255,1)
+	color: #010101
+	text-align: center
+	text-transform: uppercase
+	font-size: 20px
+	padding: 0 35px  15px
+	border: 3px solid #86bc42
+	padding-top: 13px
+
+.done-window h3 
+	margin: 0
+
+.done-window small 
+	font-size: 14px
+	text-transform: none
+	line-height: 18px
+
+.video-responsive 
+	position: relative 
+	overflow:hidden
+	height: 270px
+	margin: auto
+	margin-bottom: 25px
+
+.video-responsive iframe, 
+.video-responsive object, 
+.video-responsive embed 
+	position: absolute
+	top: 0 
+	left: 0
+	width: 100%
+	height: 100%
+
+.mfp-fade.mfp-bg 
+	opacity: 0;
+	-webkit-transition: all 0.15s ease-out
+	-moz-transition: all 0.15s ease-out
+	transition: all 0.15s ease-out
+
+.mfp-fade.mfp-bg.mfp-ready 
+	opacity: 0.8
+
+.mfp-fade.mfp-bg.mfp-removing 
+  opacity: 0
+
+.mfp-fade.mfp-wrap .mfp-content 
+	opacity: 0
+	-webkit-transition: all 0.15s ease-out
+	-moz-transition: all 0.15s ease-out
+	transition: all 0.15s ease-out
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content 
+	opacity: 1
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content 
+	opacity: 0
+
+.main_mnu_button  
+	background-color: transparent
+	border: none
+	color: #000000
+	font-size: 36px
+
+.popup-form 
+	background-color: #fff
+	border-radius: 3px
+	padding: 25px
+	position: relative
+	margin: 0 auto
+	max-width: 350px
+	text-align: center
+
+.popup-form input, 
+.popup-form textarea 
+	border: none
+	border-bottom: 1px solid #BCBCBC
+	text-indent: 15px
+	font-size: 14px
+	width: 100%
+	margin-bottom: 15px
+	padding: 10px 0
+
+.popup-form h3 
+	margin: 0
+	text-transform: uppercase
+	font-size: 24px
+	line-height: 1.2
+	margin-bottom: 15px
+
+.dib 
+	display: inline-block
+
+.text-right 
+	text-align: right
+
+.hidden 
+	display: none
+
+.radio 
+	position: absolute
+	z-index: -1
+	opacity: 0
+	margin: 10px 0 0 7px
+
+.radio + label 
+	position: relative
+	padding: 0 0 0 35px
+	cursor: pointer
+
+.radio + label:before 
+	content: ''
+	position: absolute
+	top: -3px
+	left: 0
+	width: 22px
+	height: 22px
+	border: 1px solid #CDD1DA
+	border-radius: 50%
+	background: #FFF
+
+.radio + label:after 
+	content: ''
+	position: absolute
+	top: 1px
+	left: 4px
+	width: 16px
+	height: 16px
+	border-radius: 50%
+	background: #9FD468
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.5)
+	opacity: 0
+	transition: .2s
+
+.radio:checked + label:after 
+	opacity: 1;
+
+.radio:focus + label:before 
+	box-shadow: 0 0 0 3px rgba(255,255,0,.7)
+
+
+
+.checkbox 
+	position: absolute
+	z-index: -1
+	opacity: 0
+	margin: 10px 0 0 20px
+
+.checkbox + label 
+	position: relative
+	padding: 0 0 0 60px
+	cursor: pointer
+
+.checkbox + label:before 
+	content: ''
+	position: absolute
+	top: -4px
+	left: 0
+	width: 50px
+	height: 26px
+	border-radius: 13px
+	background: #CDD1DA
+	box-shadow: inset 0 2px 3px rgba(0,0,0,.2)
+	transition: .2s
+
+.checkbox + label:after 
+	content: ''
+	position: absolute
+	top: -2px
+	left: 2px
+	width: 22px
+	height: 22px
+	border-radius: 10px
+	background: #FFF
+	box-shadow: 0 2px 5px rgba(0,0,0,.3)
+	transition: .2s
+
+.checkbox:checked + label:before 
+ 	background: #9FD468
+
+.checkbox:checked + label:after 
+ 	left: 26px
+
+.checkbox:focus + label:before 
+	box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px rgba(255,255,0,.7)
+
+.main_mnu_button
+	width: 28px
+	height: 22px
+	border-top: 3px solid #fff
+	border-bottom: 3px solid #fff
+	position: relative
+	cursor: pointer
+	position: absolute
+	top: 20px
+	left: 15px
+	display: none
+	z-index: 15
+	&:focus
+		outline: none !important
+	&:after
+		content: ''
+		display: inline-block
+		top: 50%
+		left: 0
+		right: 0
+		transform: translate(0, -50%) rotate(0)
+		height: 3px
+		width: 100%
+		position: absolute
+		background-color: #fff
+		transition: all .3s
+	&:before
+		content: ''
+		display: inline-block
+		top: 50%
+		left: 0
+		right: 0
+		transform: translate(0, -50%) rotate(0)
+		height: 3px
+		width: 100%
+		position: absolute
+		background-color: #fff
+		transition: all .3s
+.main_mnu_button.active
+	border-top: 3px solid transparent
+	border-bottom: 3px solid transparent
+	&:after
+		transform: translate(0, -50%) rotate(-45deg)
+	&:before
+		transform: translate(0, -50%) rotate(45deg)
+.header-main
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 10
+.header
+	margin-top: 55px
+	padding: 40px 0
+	background: rgba(123,211,229, .8)	
+.btn
+	background-color: transparent
+.slider
+	.item
+		min-height: 100vh	
+		background-size: cover
+		background-position: center top
+		position: relative
+		color: #fff
+		overflow: hidden
+		.btn
+			position: absolute
+			bottom: -35px
+			right: 90px
+
+		.center
+			position: absolute
+			margin-top: 80px
+			left: 0
+			top: 50%
+			width: 100%
+			transform: translate(0, -50%)
+		.wrapper
+			padding: 70px 0
+			position: relative
+			z-index: 1
+			.title
+				font-size: 42px
+				line-height: 1.2
+				margin-bottom: 40px
+				position: relative
+				z-index: 2
+				&:after
+					content: ''
+					display: inline-block
+					position: absolute
+					top: -25px
+					bottom: 25px
+					right: -30px
+					left: -9999px
+					z-index: -1
+					background: $cyan
+			p
+				font-size: 18px
+				font-family: "AdobeClean-Light"
+			&:after
+				content: ''
+				display: inline-block
+				position: absolute
+				top: 0
+				bottom: 0
+				right: 0
+				left: -9999px
+				z-index: -1
+				background: rgba(0,0,0, .4)
+	.slick-dots
+		position: absolute
+		top: 50%
+		right: 15px
+		transform: translate(0, -50%)
+		z-index: 15
+		width: 16px
+		height: 120px
+		li
+			width: 16px
+			height: 16px
+			margin-bottom: 0
+			background-color: #fff
+			button
+				&:before
+					display: none
+		li.slick-active
+			background-color: $cyan
+.btn-cyan
+	display: inline-block
+	padding: 17px 133px
+	text-align: center
+	text-transform: uppercase
+	color: #fff
+	position: relative
+	z-index: 1
+	&:before
+		content: ''
+		position: absolute
+		display: inline-block
+		background-color: $cyan
+		z-index: -2
+		top: 10px
+		right: 10px
+		bottom: -10px
+		left: -10px
+		transition: all .3s
+	&:after
+		content: ''
+		position: absolute
+		display: inline-block
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		border: 2px solid #fff
+		transition: all .3s
+	&:hover
+		color: #fff
+		&:before
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+		&:after
+			top: 5px
+			left: 5px
+			right: 5px
+			bottom: 5px
+	
+.btn-search
+	background-color: transparent
+	border: none
+	margin-left: 10px
+nav
+	display: inline-block
+	font-size: 18px
+	ul
+		li
+			display: inline-block
+			margin-left: 10px
+			a
+				color: #fff
+				border-bottom: 1px solid transparent
+				&:hover
+					color: #fff
+					border-bottom: 1px solid #fff
+.catalog
+	background-color: $cyan
+	padding: 70px 0
+	margin-top: -50px
+	text-align: center
+	h2
+		color: #fff
+		font-size: 36px
+		line-height: 1.2
+		margin-bottom: 50px
+.cat-box
+	border: 2px solid transparent
+	margin-bottom: 30px
+	transition: all .3s
+	&:hover
+		border: 2px solid #fff
+	span
+		display: block
+		height: 140px
+		position: relative
+		img
+			position: absolute
+			bottom: 0
+			left: 50%
+			transform: translate(-50%, 0)
+	p
+		text-transform: uppercase
+		font-size: 18px
+		color: #fff
+		padding-left: 35px
+		padding-right: 35px
+		margin-top: 25px
+.btn-catalog
+	font-size: 18px
+	line-height: 1.2
+	color: #fff
+	text-transform: uppercase
+	padding: 14px 0
+	border: 2px solid #fff
+	display: block
+	margin-top: 80px
+	&:hover
+		background-color: #fff
+		color: $cyan
+.main-goods
+	padding: 65px 0
+.prod-box
+	border: 2px solid transparent
+	text-align: center
+	padding: 15px
+	margin-bottom: 30px
+	transition: all .3s
+	background-color: #fff
+	.prod-img
+		display: block
+		text-align: center
+		img
+			display: inline-block !important
+	&:hover
+		border: 2px solid $cyan
+	.name
+		margin-top: 15px
+		font-size: 18px
+		line-height: 1.2
+		display: block
+		margin-bottom: 10px
+		color: #3b3b3b
+		&:hover
+			color: $cyan
+.old-price
+	color: #b8b8b8
+	font-size: 18px
+	line-height: 1.2
+	position: relative
+	display: inline-block
+	&:after
+		content: ''
+		display: inline-block
+		position: absolute
+		top: 7px
+		left: 0
+		right: 0
+		height: 1px
+		background-color: #b8b8b8
+.price
+	font-size: 18px
+	color: $cyan
+	span
+		font-size: 14px
+		display: block
+	b
+		font-size: 30px
+
+img
+	max-width: 100%
+
+.text-main
+	background: url(../img/bg1.png) no-repeat center  top
+	font-size: 36px
+	color: #fff
+	padding: 120px 0 233px
+	font-family: "AdobeClean-Light" 
+	position: relative
+	z-index: 3
+.text-main2 
+	background: url(../img/bg2.png) no-repeat center top
+	padding: 140px 0 250px
+	position: relative
+	z-index: 2
+	margin-top: -100px
+	h3
+		font-size: 36px
+		line-height: 1.2
+		span
+			color: $blue
+	p
+		font-size: 18px
+		line-height: 1.8
+		font-family: "AdobeClean-Light"
+.text-main3
+	background: url(../img/bg4.png) no-repeat center top
+	background-size: cover
+	padding: 150px 0 180px
+	margin-top: -50px
+	h3
+		font-size: 36px
+		line-height: 1.2
+		span
+			color: $blue
+			text-transform: uppercase
+	p
+		font-size: 18px
+		line-height: 1.8
+		font-family: "AdobeClean-Light"
+.btn-white
+	display: inline-block
+	padding: 17px 133px
+	text-align: center
+	text-transform: uppercase
+	color: $cyan
+	position: relative
+	z-index: 1
+	&:before
+		content: ''
+		position: absolute
+		display: inline-block
+		background-color: rgba(255,255,255,.7)
+		z-index: -2
+		top: 10px
+		right: 10px
+		bottom: -10px
+		left: -10px
+		transition: all .3s
+	&:after
+		content: ''
+		position: absolute
+		display: inline-block
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		border: 2px solid $cyan
+		transition: all .3s
+	&:hover
+		color: $cyan
+		&:before
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-color: rgba(255,255,255,1)
+		&:after
+			top: 5px
+			left: 5px
+			right: 5px
+			bottom: 5px
+.slider-products
+	background-color: #e8e8e8
+	padding-bottom: 70px
+	.item
+		padding: 0 15px
+	h2
+		font-size: 36px
+		line-height: 1.2
+		text-transform: uppercase
+		margin: 80px 0 70px
+		b
+			color: $cyan
+	.slick-dots
+		text-align: center
+		li
+			width: 16px
+			height: 16px
+			display: inline-block
+			margin: 0 10px
+			background-color: #5d5d5d
+			button
+				&:before
+					display: none
+		li.slick-active
+			background-color: $cyan
+footer
+	background-color: #414040
+	padding-top: 60px
+	color: #fff
+	a
+		color: #fff
+		&:hover
+			color: $cyan
+	h4
+		text-transform: uppercase
+		color: $cyan
+		font-family: "AdobeClean-Regular"
+	.f-menu-2
+		font-family: "AdobeClean-Light"
+		position: relative
+		z-index: 2
+	.f-menu
+		text-transform: uppercase
+		li
+			margin-bottom: 7px
+	.f-title
+		position: relative
+		margin-top: 50px
+		font-size: 30px
+		line-height: 1.2
+		font-family: "AdobeClean-Light"
+		position: relative
+		padding: 15px 0
+		z-index: 1
+		&:after
+			content: ''
+			display: inline-block
+			position: absolute
+			background-color: rgba(0,0,0,.2)
+			top: 0
+			right: 100px
+			left: -320px
+			bottom: -10px
+			z-index: -1
+		span
+			color: $cyan
+			font-family: "AdobeClean-Regular"
+	.slogan
+		font-size: 24px
+		text-align: center
+		padding: 15px 15px 25px
+		background-color: $cyan
+		color: #000
+.copyright
+	margin-top: 60px
+	border-top: 2px solid $cyan
+	padding: 15px 0
+	text-align: center
+	font-size: 12px
+	p
+		margin: 0
+.search
+	padding: 50px 0
+	background-color: rgba(117, 208, 229, .8)
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 30
+	display: none
+	.search-from
+		position: relative
+	input
+		width: 100%
+		border: none
+		padding: 14px 0
+		text-indent: 15px
+		font-size: 14px
+	button
+		position: absolute
+		top: 0px
+		right: 0px
+		background-color: $blue
+		padding: 13px 15px 12px
+		&:hover
+			opacity: .8
+.header-opacity
+	background-color: rgba(0,0,0,.4)
+.map
+	min-height: 650px
+	background-color: #E9E9E9
+.crumbs
+	color: #fff
+	font-size: 14px
+	margin-top: 15px
+	li
+		display: inline-block
+		a
+			color: #fff
+			border-bottom: 1px solid #fff
+			&:hover
+				border-bottom: 	1px solid transparent
+h1.title
+	margin-top: 30px
+	margin-bottom: 45px
+	font-size: 36px
+	line-height: 1.2
+	color: #fff
+.add-box
+	background-color: $cyan
+	padding: 25px
+	color: #fff
+	font-size: 18px
+	width: 540px
+	position: relative
+	&:before
+		content: ''
+		display: inline-block
+		width: 30px
+		top: 0
+		bottom: 0
+		left: -30px
+		background-color: $cyan
+		position: absolute
+	&:after
+		content: ''
+		display: block
+		clear: both
+	ul
+		li
+			float: left
+			width: 50%
+			bottom: 7px
+.where-buy
+	padding-bottom: 70px
+	margin-top: -180px
+	.btn
+		position: relative
+		top: -100px
+	.wrapper
+		.col-lg-3:nth-child(3),
+		.col-lg-3:nth-child(7),
+		.col-lg-3:nth-child(4n)
+			margin-top: -160px
+.logo-partner-box
+	margin-top: 30px	
+
+.btn-gray
+	display: inline-block
+	padding: 17px 133px
+	text-align: center
+	text-transform: uppercase
+	color: $cyan
+	position: relative
+	z-index: 1
+	background-color: transparent
+	&:before
+		content: ''
+		position: absolute
+		display: inline-block
+		background-color: #e8e8e8
+		z-index: -2
+		top: 10px
+		right: 10px
+		bottom: -10px
+		left: -10px
+		transition: all .3s
+	&:after
+		content: ''
+		position: absolute
+		display: inline-block
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		border: 2px solid $cyan
+		transition: all .3s
+	&:hover
+		color: $cyan
+		&:before
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+		&:after
+			top: 5px
+			left: 5px
+			right: 5px
+			bottom: 5px
+.contacts-page
+	margin-top: -150px
+	padding-bottom: 70px
+.contacts-box
+	background-color: $cyan
+	padding: 25px
+	color: #fff
+	position: relative
+	z-index: 2
+	&:after
+		content: ''
+		display: inline-block
+		position: absolute
+		top: 0
+		bottom: 0
+		right: -30px
+		width: 30px
+		background-color: $cyan
+	p
+		font-size: 18px
+		margin-bottom: 0
+	h4
+		font-size: 18px
+		font-family: "AdobeClean-Bold"
+	.item
+		font-size: 16px
+		margin-top: 35px
+.feedback-form
+	margin-top: 150px
+	background-color: #eaeaea
+	padding: 50px 100px
+	padding-bottom: 0
+	position: relative
+	&:after
+		content: ''
+		display: inline-block
+		position: absolute
+		top: 0
+		bottom: 0
+		left: -30px
+		width: 30px
+		background-color: #eaeaea
+	h3
+		font-size: 30px
+		line-height: 1.2
+		span
+			color: $cyan
+	input, textarea
+		width: 100%
+		padding: 10px 0
+		text-indent: 15px
+		margin-bottom: 10px
+		border: 1px solid #fff
+		transition: all .3s
+		&:focus
+			border: 1px solid $cyan
+	textarea
+		min-height: 150px
+	.btn
+		position: relative
+		bottom: -20px
+.requisites
+	padding-right: 50px
+	margin-top: 50px
+	h3
+		font-size: 24px
+		border-bottom: 2px solid $cyan
+		padding-bottom: 25px
+		margin-bottom: 25px
+		line-height: 1.2
+.btn-download
+	padding: 20px 65px 20px 55px
+	text-transform: uppercase
+	color: #000
+	display: inline-block
+	margin-top: 25px
+	background: #eaeaea url(../img/ico-download.png) no-repeat right 35px center
+
+	&:hover
+		color: #fff
+		background-color: $cyan
+.news-header
+	background: url(../img/bg-title-partners.png) no-repeat center top
+	border: 1px solid transparent
+	h1.title
+		margin-bottom: 80px
+.article-box
+	margin-bottom: 30px
+	position: relative
+	.description
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		padding: 15px
+		background-color: rgba(232,232,232,.9)
+		h3
+			font-size: 24px
+			line-height: 1.2
+			margin-bottom: 10px
+			a
+				color: #000
+				&:hover
+					color: $cyan
+		.date
+			color: $cyan
+			font-size: 18px
+			margin-bottom: 10px
+.article-box.no-preview
+	.description
+		position: relative
+		background-color: rgba(232,232,232,1)
+
+.article-box.reviews-box
+	.description
+		background-color: rgba(0,0,0,.8)
+		color: #fff
+		h3
+			a
+				color: #fff
+
+.articles-page
+	padding-bottom: 70px
+	margin-top: -50px
+	.btn
+		padding-left: 15px
+		padding-right: 15px
+		display: block
+		width: 100%
+.about-header
+	background: url(../img/bg-title-partners.png) no-repeat center top
+	border: 1px solid transparent
+	h1.title
+		margin-bottom: 20px
+		+ p
+			font-size: 24px
+			margin-bottom: 50px
+			color: #fff
+			font-family: "AdobeClean-Light"
+.about-title-box
+	width: 370px
+	height: 320px
+	position: absolute
+	z-index: 1
+	&:after
+		content: ''
+		display: inline-block
+		position: absolute
+		width: 370px
+		height: 320px
+		top: 30px
+		left: 100px
+		background-color: rgba(0,0,0,.4)
+		z-index: -2
+	&:before
+		content: ''
+		display: inline-block
+		position: absolute
+		width: 370px
+		height: 320px
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: $cyan url(../img/ico-about.png) no-repeat center center
+		z-index: 1
+
+.about-page
+	padding: 70px 0
+	h2
+		color: $cyan
+		font-size: 24px
+		line-height: 1.2
+		margin-bottom: 20px
+	h3
+		font-size: 20px
+	ul
+		margin: 15px 0
+		li
+			position: relative
+			padding-left: 25px
+			margin-bottom: 5px
+			&:after
+				content: ''
+				display: inline-block
+				position: absolute
+				width: 10px
+				height: 10px
+				left: 0
+				top: 7px
+				background-color: $cyan
+.about-page-2
+	min-height: 510px
+	padding: 50px 0
+	background: url(../img/bg-about.png) no-repeat center top
+	background-size: cover
+	color: #fff
+	font-size: 24px
+	font-family: "AdobeClean-Light"
+.news-page
+	padding-top: 30px
+	.title
+		text-transform: uppercase
+		font-size: 36px
+		line-height: 1.2
+		span
+			color: $cyan
+	.date
+		background-color: $cyan
+		color: #fff
+		text-align: right
+		width: 370px
+		font-size: 24px
+		line-height: 1.2
+		padding: 10px 25px
+		margin: 25px 0
+	.desc
+		font-size: 18px
+		font-family: "AdobeClean-Light"
+	.news-preview
+		text-align: right
+		position: relative
+		top: -80px
+		z-index: 1
+		display: inline-block
+		&:after
+			content: ''
+			display: inline-block
+			position: absolute
+			background-color: rgba(0,0,0,.2)
+			z-index: -1
+			bottom: 100px
+			top: -20px
+			left: -20px
+			right: 20px
+.partners-box
+	margin-top: 30px
+.partners-page
+	padding-bottom: 70px
+	.btn
+		margin-top: 30px
+.category-list
+	position: relative
+	background: $cyan
+	text-align: center
+	padding: 25px
+	margin-top: -30px
+	&:after
+		content: ''
+		position: absolute
+		display: inline-block
+		top: 0
+		bottom: 0
+		right: 100%
+		left: -9999px
+		background-color: $cyan
+.catalog-header
+	h1.title
+		margin-bottom: 70px
+.product-list
+	padding-top: 50px
+.category-header
+	background: url(../img/bg-title-prod.png) no-repeat center top
+	background-size: cover
+	border: 1px solid transparent
+	color: #fff
+	.title-category
+		margin-top: 35px
+		margin-bottom: 35px
+		position: relative
+		padding-left: 140px
+		min-height: 140px
+		img
+			position: absolute
+			left: 0
+			top: 0
+		h1
+			font-size: 30px
+			line-height: 1.2
+		p
+			font-family: "AdobeClean-Light"
+.category-page
+	padding-bottom: 70px
+	padding-top: 50px
+	.btn
+		margin-top: 35px
+.product-header
+	padding-bottom: 120px	
+.product-gallery
+	background-color: #fff
+	margin-top: -110px
+.product-description
+	margin-top: 40px
+	h1
+		font-size: 30px
+	p
+		margin-bottom: 0
+		font-family: "AdobeClean-Light"
+	table
+		width: 100%
+		margin: 25px 0
+		tr
+			&:nth-child(2n)
+				background-color: #e8e8e8
+		td
+			padding: 7px 10px
+			&:last-child
+				font-family: "AdobeClean-Light"
+	ul
+		font-family: "AdobeClean-Light"
+		margin-bottom: 30px
+		&:after
+			content: ''
+			display: block
+			clear: both
+		li
+			float: left
+			width: 50%
+			padding-left: 25px
+			position: relative
+			margin-bottom: 7px
+			line-height: 1.2
+			&:before
+				content: ''
+				position: absolute
+				display: inline-block
+				width: 10px
+				height: 10px
+				left: 0
+				top: 2px
+				background-color: #e8e8e8
+.btn-card
+	background-color: $cyan
+	color: #fff
+	border: 2px solid $cyan
+	padding: 14px 55px
+	display: inline-block
+	text-transform: uppercase
+	font-size: 18px
+	&:hover
+		background-color: transparent
+		border: 2px solid $cyan
+		color: $cyan
+.product-page
+	padding-bottom: 70px
+.slick-dots
+	text-align: center
+	li
+		display: inline-block
+		margin: 0 10px
+		width: 16px
+		height: 16px
+		background-color: #666666
+		button
+			&:before
+				display: none
+	li.slick-active
+		background-color: $cyan
+.services-page
+	padding: 50px 0
+	font-size: 18px
+	font-family: "AdobeClean-Light"
+.serv-img
+	position: relative
+	margin-top: -90px
+	z-index: 1
+	&:after
+		content: ''
+		position: absolute
+		z-index: -1
+		top: -20px
+		left: -20px
+		right: 20px
+		bottom: 20px
+		background-color: rgba(255,255,255,.4)
+.map-services
+	min-height: 500px
+	background-color: #F4F4F4
+.services-add
+	padding-bottom: 70px
+	margin-top: -120px
+	.wrapper
+		background-color: rgba(255,255,255,.9)
+		position: relative
+		padding: 25px
+		h2
+			font-size: 24px	
+			margin-bottom: 25px
+		h3
+			font-size: 18px
+			color: $cyan
+		.item
+			h4
+				font-size: 18px
+			p
+				margin-bottom: 0
+				b
+					color: $cyan
+			margin-bottom: 35px
+@import "media" // Always at the end
+@import "shame"
