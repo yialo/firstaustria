@@ -31,12 +31,23 @@
         .btn
             bottom: -20px !important
 
+.shame-text-main
+    background-position-x: calc(50% + 100px) !important
+    .col-lg-12
+        width: 320px
+    
+    +media-breakpoint-up(sm)
+        background-position-x: calc(50% + 75px) !important
+        .col-lg-12
+            width: 400px
 
+    +media-breakpoint-up(md)
+        background-position-x: calc(50% + 50px) !important
+        .col-lg-12
+            width: 450px
 
-
-.shame-catalog
-    margin-top: 0 !important
-
+    +media-breakpoint-up(lg)
+        background-position-x: 50% !important
     
     // ≤576px
 +media-breakpoint-up(sm)
