@@ -36,7 +36,7 @@ var copyimg = function () {
 
 var scripts = function () {
   return gulp.src('./app/js/**/*.js')
-    .pipe(gulp.dest('./build/'));
+    .pipe(gulp.dest('./build/js/'));
 }
 
 var style = function () {
