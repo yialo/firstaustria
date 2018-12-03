@@ -6,13 +6,30 @@
     .wrapper
         right: -15px !important
         margin-left: -15px !important
+        padding-left: 30px !important
     img
         vertical-align: top !important
-        
-    +media-breakpoint-up(sm)
-        .container
-            max-width: 100% !important
+    .container
+         max-width: 100% !important
 
+    +media-breakpoint-up(sm)
+        p
+            width: 500px !important
+
+    +media-breakpoint-up(lg)
+        .center
+            margin-top: 120px !important
+        .wrapper
+            padding-left: 80px !important
+        p
+            width: 100% !important
+            margin-bottom: 40px !important
+
+    +media-breakpoint-up(x1)
+        p
+            margin-bottom: 0 !important
+        .btn
+            bottom: -20px !important
 
 
 
