@@ -1,25 +1,25 @@
 {
-  "name": "y",
-  "version": "1.0.0",
-  "description": "",
-  "main": "gulpfile.js",
-  "scripts": {
-    "build": "gulp build",
-    "start": "npm run build && gulp serve"
-  },
-  "author": "",
-  "license": "ISC",
+  "author": "WayToStart",
+  "description": "First Of Austria project",
   "devDependencies": {
-    "autoprefixer": "^9.1.2",
-    "browser-sync": "^2.26.0",
+    "autoprefixer": "^9.4.6",
+    "browser-sync": "^2.26.3",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-cli": "^2.0.1",
     "gulp-csso": "^3.0.1",
-    "gulp-plumber": "^1.2.0",
+    "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.1",
+    "gulp-sass": "^4.0.2",
     "gulp-sass-glob": "^1.0.9"
-  }
+  },
+  "license": "ISC",
+  "main": "gulpfile.js",
+  "name": "y",
+  "scripts": {
+    "build": "gulp build",
+    "start": "npm run build && gulp serve"
+  },
+  "version": "1.0.0"
 }
