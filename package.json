@@ -1,12 +1,12 @@
 {
   "author": "WayToStart",
-  "description": "First Of Austria project",
+  "description": "First of Austria project",
   "devDependencies": {
-    "autoprefixer": "^9.4.6",
-    "browser-sync": "^2.26.3",
-    "del": "^3.0.0",
-    "gulp": "^4.0.0",
-    "gulp-cli": "^2.0.1",
+    "autoprefixer": "^9.5.1",
+    "browser-sync": "^2.26.5",
+    "del": "^4.1.0",
+    "gulp": "^4.0.1",
+    "gulp-cli": "^2.2.0",
     "gulp-csso": "^3.0.1",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
@@ -16,7 +16,12 @@
   },
   "license": "ISC",
   "main": "gulpfile.js",
-  "name": "y",
+  "name": "firstaustria",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yialo/firstaustria.git"
+  },
   "scripts": {
     "build": "gulp build",
     "start": "npm run build && gulp serve"
